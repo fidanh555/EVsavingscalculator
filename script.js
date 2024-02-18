@@ -1,16 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('calculateButton').addEventListener('click', function () {
-        console.log('Calculate button clicked');
         calculateSavings();
     });
 });
 
 function calculateSavings() {
-    console.log('Calculating savings...');
-
     const numVehicles = parseFloat(getInputValue('numVehicles'));
-    console.log('numVehicles:', numVehicles);
-
     const mileage = parseFloat(getInputValue('mileage'));
     const fuelCost = parseFloat(getInputValue('fuelCost'));
     const iceConsumption = parseFloat(getInputValue('iceConsumption'));
@@ -22,7 +17,6 @@ function calculateSavings() {
 
     if (!areInputsValid(numVehicles, mileage, fuelCost, iceConsumption, evConsumption, electricityCost)) {
         displayError('Please enter valid numerical values for all fields.');
-        console.log('Validation failed');
         return;
     }
 
@@ -34,9 +28,6 @@ function calculateSavings() {
 
     const totalSavings = iceFuelCost - evElectricityCost;
     const perVehicleSavings = totalSavings / numVehicles;
-
-    console.log('Total Savings:', totalSavings);
-    console.log('Per Vehicle Savings:', perVehicleSavings);
 
     displayResult(totalSavings, perVehicleSavings);
 }
