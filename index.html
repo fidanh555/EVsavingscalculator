@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Savings Calculator</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/fidanh555/EVsavingscalculator/styles.css">
+</head>
+<body>
+    <div id="fleetCalculator">
+        <label for="numVehicles">Number of Vehicles:</label>
+        <input type="number" id="numVehicles" placeholder="Enter number of vehicles" required>
+
+        <label for="mileage">Average Monthly Mileage per Vehicle (km):</label>
+        <input type="number" id="mileage" placeholder="Enter mileage" required>
+
+        <label for="fuelCost">Fuel Cost per Liter (€):</label>
+        <input type="number" id="fuelCost" placeholder="Enter fuel cost" required>
+
+        <label for="iceConsumption">ICE Vehicle Fuel Consumption (liters/100km):</label>
+        <input type="number" id="iceConsumption" placeholder="Enter ICE consumption" required>
+
+        <label for="evConsumption">EV Electricity Consumption (kWh/100km):</label>
+        <input type="number" id="evConsumption" placeholder="Enter EV consumption" required>
+
+        <label for="electricityCost">Electricity Cost per kWh (€):</label>
+        <input type="number" id="electricityCost" placeholder="Enter electricity cost" required>
+
+        <button id="calculateButton">Calculate Savings</button>
+
+        <div id="errorMessages" style="color: red;"></div>
+
+        <div id="result">
+            <p>Total Monthly Savings: €<span id="totalSavingsValue">0.00</span></p>
+            <p>Per Vehicle Monthly Savings: €<span id="perVehicleSavingsValue">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/fidanh555/EVsavingscalculator/script.js"></script>
+</body>
+</html>
