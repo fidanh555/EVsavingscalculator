@@ -1,13 +1,13 @@
+function getInputValue(id) {
+    return document.getElementById(id).value.trim();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('calculateButton').addEventListener('click', function () {
         console.log('Calculate button clicked');
         calculateSavings();
     });
 });
-
-function getInputValue(id) {
-    return document.getElementById(id).value.trim();
-}
 
 function calculateSavings() {
     console.log('Calculating savings...');
